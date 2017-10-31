@@ -35,10 +35,21 @@ class App extends Component {
 		});
     }
 
+    handleAddProject(project){
+	    // State is immutable.
+	    // Do not change it.
+	    // Update it.
+	    let projects = this.state.projects;
+	    projects.push(project);
+	    this.setState({
+	    	projects: projects
+	    })
+    }
+
   render() {
     return (
       <div className="App">
-	      <AddProject/>
+	      <AddProject addProject={this.handleAddProject.bind(this)}/>
           <Projects projects={this.state.projects}/>
       </div>
     );
