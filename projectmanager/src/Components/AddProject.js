@@ -51,8 +51,10 @@ class AddProject extends Component {
 							{categoryOptions}
 						</select>
 					</div>
+					<br/>
 					<input type="submit" value="submit"/>
 				</form>
+				<br/>
 			</div>
 		);
 	}
